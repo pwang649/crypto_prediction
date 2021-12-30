@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+    </head>
+    <body>
+        <h1>Welcome to Crypto price prediction web!</h1>
+        <a href="/eth"><button>Predict ETH</button></a>
+        <a href="/btc"><button>Predict BTC</button></a>
+        <form action="/eth/predict" method="POST" style="margin-top:30px">
+            <h2>ETH Prediction</h2>
+            <label style="margin-top:10px">Enter how long into the future you want to predict (a positive integer that must be between 30 and 200)</label><br>
+            <input type="text" name="prediction_days" placeholder="prediction days" style="margin-top:10px; margin-bottom:10px"><br>
+            <label>Enter the starting year of the data you want to use (integer between 2017 and 2021)</label><br>
+            <select name="start_year" style="margin-top:10px">
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+            </select><br>
+            <input type="submit" value="Predict!" style="margin-top:10px">
+            <label style="color: red">{{error}}</label>
+        </form>
+        <form action="/btc/predict" method="POST" style="margin-top:30px">
+            <h2>BTC Prediction</h2>
+            <label style="margin-top:10px">Enter how long into the future you want to predict (a positive integer that must be between 30 and 200)</label><br>
+            <input type="text" name="prediction_days" placeholder="prediction days" style="margin-top:10px; margin-bottom:10px"><br>
+            <label>Enter the starting year of the data you want to use (integer between 2017 and 2021)</label><br>
+            <select name="start_year" style="margin-top:10px">
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+            </select><br>
+            <input type="submit" value="Predict!" style="margin-top:10px">
+            <label style="color: red">{{error}}</label>
+        </form>
+    </body>
+</html>
